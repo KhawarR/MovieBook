@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/horizontal_margin">
+
+
+    <ImageView
+        android:id="@+id/ivMoviePoster"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/avatar_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingStart="@dimen/horizontal_margin"
+        android:paddingTop="@dimen/vertical_margin"
+        android:paddingEnd="0dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name" />
+
+
+    <TextView
+        android:id="@+id/tvMovieRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/title_desc_gap"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="@dimen/horizontal_margin"
+        android:paddingEnd="0dp"
+        android:paddingBottom="@dimen/vertical_margin_small"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_desc_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle"
+        tools:text="Rating" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
